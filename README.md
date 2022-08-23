@@ -3,12 +3,12 @@ MTProto proxy server
 Subscribe us [@tgsocks](https://t.me/tgsocks)
 
 # Requirements
-* Install .NETCore 2.0 first
+* Install .NET 6.0 first
 
 # Installation
 ## Clone this repository
 ```
-git clone https://github.com/freepvps/mtproto-proxy.git
+git clone https://github.com/thucngv/mtproto-proxy.git
 cd mtproto-proxy
 ```
 
