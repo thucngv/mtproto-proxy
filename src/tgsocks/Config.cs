@@ -13,7 +13,7 @@ namespace tgsocks
     public class Config
     {
         public List<Server> Servers { get; } = new List<Server>();
-        public List<string> DataCentres { get; } = new List<string>(MTProto.Defaults.DataCentres);
+        public List<string> DataCentres { get; set; }
         public int ReceiveBufferSize { get; set; } = 4096;
         public int SelectTimeout { get; set; } = 1;
         public int ConnectionsPerThread { get; set; } = 64;

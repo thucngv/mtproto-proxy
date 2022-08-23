@@ -4,6 +4,6 @@
     {
         public byte[] Secret { get; set; }
         public bool CheckProto { get; set; }
-        public string[] DataCentres { get; set; } = Defaults.DataCentres;
+        public string[] DataCentres { get; set; }
     }
 }

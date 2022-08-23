@@ -8,7 +8,7 @@ namespace MTProto.Proxy.Cryptography
         public static Random Random = new Random();
         public static byte[] ComputeSHA256(byte[] data)
         {
-            using (var sha256 = new SHA256Managed())
+            using (var sha256 = SHA256.Create())
             {
                 return sha256.ComputeHash(data);
             }
@@ -16,7 +16,7 @@ namespace MTProto.Proxy.Cryptography
 
         public static ICryptoTransform CreateEncryptorFromAes(byte[] key)
         {
-            using (var aesManaged = new AesManaged())
+            using (var aesManaged = Aes.Create())
             {
                 aesManaged.Key = key;
                 aesManaged.Mode = CipherMode.ECB;

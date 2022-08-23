@@ -52,7 +52,7 @@ namespace MTProto.Proxy.Handlers
                 }
                 Cryptography.MTProtoHelper.GenerateNewBuffer(proto, Buffer);
                 var dcId = Math.Abs(BitConverter.ToInt16(tmp, 60)) - 1;
-                var dcHost = Connection.Context.DataCentres[dcId % Defaults.DataCentres.Length];
+                var dcHost = Connection.Context.DataCentres[dcId % Connection.Context.DataCentres.Length];
 
                 TelegramSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 TelegramSocket.BeginConnect(dcHost, 443, OnConnected, null);
